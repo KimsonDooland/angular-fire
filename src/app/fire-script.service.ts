@@ -6,13 +6,20 @@ import { Observable } from 'rxjs';
 
 
 @Injectable()
-export class ChartService {
+export class FireScriptService {
 
   constructor(public db: AngularFireDatabase) { }
 
 
   getData(dataset: string) {
-    return this.db.list(dataset).snapshotChanges();
+    return this.db.list(dataset).valueChanges();
   }
 
+  //used for realtime data upadtes
+
+  UpdateRanking(key, newData) {
+
+    return this.db.object(`jimjacksjimontest/${key}`).update(newData);
+    
+  }
 }
