@@ -1,6 +1,27 @@
-<app-cool-chart></app-cool-chart>
+<!-- <app-cool-chart></app-cool-chart>
 
 
 <app-second-cool-chart></app-second-cool-chart>
 
 <app-firebase-chart></app-firebase-chart>
+
+<app-range-slider></app-range-slider> -->
+
+
+
+<nav class="navbar navbar-inverse">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <a class="navbar-brand" href="#">Cool Charts</a>
+      </div>
+      <ul class="nav navbar-nav">
+        <li ><a routerLink="" routerLinkActive="active">Home</a></li>
+        <li><a routerLink="cool_chart" routerLinkActive="active">Cool Chart Example</a></li>
+            <li><a routerLink="firebase_chart" routerLinkActive="active">Live with Firebase</a></li>
+            <li><a routerLink="range_slider_chart" routerLinkActive="active">Range Slider Mate</a></li>
+      </ul>
+    </div>
+  </nav>
+
+
+<router-outlet></router-outlet>

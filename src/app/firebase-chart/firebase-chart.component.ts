@@ -18,13 +18,15 @@ export class FirebaseChartComponent implements OnInit {
   data:any[];
 
   ngOnInit() {
+
     this.fireScript.getData('jimjacksjimontest')
     .subscribe(data => {
       this.data = data;
-      console.log(this.data);
+      // console.log(this.data);
       Plotly.purge(this.el.nativeElement);
       this.ternaryChart(data);
     })
+
   }
 
   updateDataPoint() {
@@ -66,7 +68,6 @@ export class FirebaseChartComponent implements OnInit {
 
     Plotly.plot(element, formattedData, style);
   }
-
 
   private makeAxis(title, tickangle) {
     return {
